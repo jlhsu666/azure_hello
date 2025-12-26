@@ -1,9 +1,9 @@
-from flask import Flask
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 @app.route('/')
 def home():
-    return 'Hello, World'
+    return render_template('form.html')
 
 @app.route('/<name>')
 def hello(name):
